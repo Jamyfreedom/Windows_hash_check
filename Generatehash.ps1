@@ -1,5 +1,5 @@
 $servers1 = @("server-name","servername","servername","add-more-if-you-want")
-
+$servers2 = @("server-name","servername","servername","add-more-if-you-want")
 
 $sender = "SOC hash checker <Sender-email>"
 $recipients = "Receiver-email-1" , "Receiver-email-2" 
