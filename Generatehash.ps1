@@ -10,7 +10,7 @@ clear
 $hostname = hostname
 
 # This is run by Windows cronjob (Task Scheduler), receive feedback by email script status.
-Send-MailMessage -From $sender -To $recipients -Subject " [Window Server] Task scheduler works!. " -SmtpServer mailhost.mgt.tpgtelecom.com.sg
+Send-MailMessage -From $sender -To $recipients -Subject " [Window Server] Task scheduler works!. " -SmtpServer <Email-server>
 hashtypes = @("MD5","SHA1","SHA256")
 
 
@@ -52,5 +52,5 @@ foreach ($server in $servers2){
 
   } -ComputerName $server  |  Out-String -Stream -Width 230 | Out-File -FilePath C:\ioc_date_log\Run_process\"$server"_hash.txt
 
- Send-MailMessage -From $sender -To $recipients -Subject "-End $tStampend [Window Server]SOC Hashcheck End on Process 2. " -SmtpServer mailhost.mgt.tpgtelecom.com.sg
+ Send-MailMessage -From $sender -To $recipients -Subject "-End $tStampend [Window Server]SOC Hashcheck End on Process 2. " -SmtpServer <Email-server>
 }
