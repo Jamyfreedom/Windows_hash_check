@@ -31,9 +31,9 @@ Select-String -Path "C:\ioc_date_log\Run_process\*" -Pattern "$file"  # Compare 
 }
 
 if($i -gt 0){ #If entire comparison not found then
-  Send-MailMessage -From $sender -To $recipients -Subject "-End $tStampend [Window Server]SOC Hashcheck End $hashtype" -Body "Windows Malicious HASH FOUND. Total $i found. " -SmtpServer mailhost.mgt.tpgtelecom.com.sg
+  Send-MailMessage -From $sender -To $recipients -Subject "-End $tStampend [Window Server]SOC Hashcheck End $hashtype" -Body "Windows Malicious HASH FOUND. Total $i found. " -SmtpServer <Email-server>
 } else {
-  Send-MailMessage -From $sender -To $recipients -Subject "-End $tStampend [Window Server]SOC Hashcheck End $hashtype" -Body "Windows NO Malicious HASH FOUND. Total $i found. " -SmtpServer mailhost.mgt.tpgtelecom.com.sg
+  Send-MailMessage -From $sender -To $recipients -Subject "-End $tStampend [Window Server]SOC Hashcheck End $hashtype" -Body "Windows NO Malicious HASH FOUND. Total $i found. " -SmtpServer <Email-server>
 }
 Write-Host "Total malicious found:"$i
 
