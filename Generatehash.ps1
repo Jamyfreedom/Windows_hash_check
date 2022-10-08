@@ -36,7 +36,7 @@ foreach ($server in $servers1){
 clear
 
 
-# Same process if you have another set of Server.
+# Same process if you have another set of Server. Not to run at once , seperate managed would be great when you have three digit of servers.
 foreach ($server in $servers2){
   Invoke-Command -ScriptBlock {
   $hashtypes = @("MD5","SHA1","SHA256")
